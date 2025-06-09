@@ -9,11 +9,11 @@ const workouts = {
         }
     },
     Rhuan: {
-        days: [1, 2, 3, 4, 5],
+        days: [1, 2, 4, 5],
         plans: {
             A: [{n:"Supino reto halter",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Supino inclinado halter",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Peck deck",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Triceps francês",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Triceps testa",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Elev lateral halter",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Desenvolvimento",s:2,r:"6-8",t:"1-2 min",l:0}],
             B: [{n:"Puxada aberta",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Puxada triângulo",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Remada baixa",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Rosca halter uni",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Rosca scott",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Rosca martelo",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Crucifixo inverso",s:2,r:"6-8",t:"1-2 min",l:0}],
-            C: [{n:"Cadeira flexora",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Agachamento hack",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Leg press",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Panturrilha leg press",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Mesa flexora",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Levantamento terra",s:3,r:"8-10",t:"1-2 min",l:1}],
+            C: [{n:"Cadeira extensora",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Agachamento hack",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Leg press",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Panturrilha leg press",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Mesa flexora",s:3,r:"8-10",t:"1-2 min",l:1},{n:"Levantamento terra",s:3,r:"8-10",t:"1-2 min",l:1}],
             D: [{n:"Encolhimento de ombro halter",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Desenvolvimento halter",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Elevação lateral polia",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Crucifixo inverso",s:2,r:"6-8",t:"1-2 min",l:0},{n:"Flexão de punho",s:2,r:"6-8",t:"1-2 min",l:0}]
         }
     }
