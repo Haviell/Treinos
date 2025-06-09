@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Treino - Treinos Programados</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Login -->
+        <div id="login" class="section">
+            <div class="header">
+                <img src="file_00000000cef461f89072228269347ec5.png" alt="Logotipo Sistema de Treino" class="logo">
+                <h1>Sistema de Treino</h1>
+            </div>
+            <select id="user" class="input">
+                <option value="">Selecione o Usuário</option>
+                <option value="Gabriel">Gabriel</option>
+                <option value="Rhuan">Rhuan</option>
+            </select>
+            <input id="password" type="password" class="input" placeholder="Senha">
+            <button id="login-btn" class="btn">Entrar</button>
+            <p id="login-error" class="error hidden">Usuário ou senha inválidos.</p>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main" class="hidden">
+            <nav class="nav">
+                <button id="workout-btn" class="nav-btn active" title="Treino">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <button id="schedule-btn" class="nav-btn" title="Treinos Programados">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zm0 4h12M6 12h12M6 16h12"/>
+                    </svg>
+                </button>
+                <button id="stats-btn" class="nav-btn" title="Estatísticas">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 15v5m4-10v10m4-14v14m4-8v8m4-4v4"/>
+                    </svg>
+                </button>
+                <button id="ab-btn" class="nav-btn" title="Abdômen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 4a8 8 0 100 16 8 8 0 000-16zm0 4v8m-4-4h8"/>
+                    </svg>
+                </button>
+                <button id="logout-btn" class="nav-btn" title="Sair">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4m7 14l5-5-5-5m5 5H9"/>
+                    </svg>
+                </button>
+            </nav>
+            <h2 id="welcome"></h2>
+
+            <!-- Workout -->
+            <div id="workout" class="section">
+                <h3>Treino de Hoje</h3>
+                <div id="workout-list"></div>
+                <p id="no-workout" class="error hidden">Sem treino programado hoje.</p>
+                <button id="finalize-workout" class="btn hidden">Finalizar Treino</button>
+            </div>
+
+            <!-- Scheduled Workouts -->
+            <div id="schedule" class="section hidden">
+                <h3>Treinos Programados</h3>
+                <div id="schedule-list"></div>
+                <button id="back-schedule" class="btn">Voltar</button>
+            </div>
+
+            <!-- Statistics -->
+            <div id="stats" class="section hidden">
+                <h3>Estatísticas</h3>
+                <div id="calendar" class="calendar"></div>
+                <div class="charts">
+                    <div>
+                        <h4>Progresso Semanal</h4>
+                        <canvas id="weekly-chart"></canvas>
+                    </div>
+                    <div>
+                        <h4>Progresso Abdominal</h4>
+                        <canvas id="ab-chart"></canvas>
+                    </div>
+                </div>
+                <button id="back-workout" class="btn">Voltar</button>
+            </div>
+
+            <!-- Abdominal Workout -->
+            <div id="ab-workout" class="section hidden">
+                <h3>Treino de Abdômen</h3>
+                <div>
+                    <p>4x25 abdominais</p>
+                    <input type="checkbox" id="crunches">
+                    <label for="crunches">Concluído</label>
+                </div>
+                <div>
+                    <p>1 min de prancha</p>
+                    <button id="start-plank" class="btn">Iniciar Timer</button>
+                    <p id="plank-timer">01:00</p>
+                </div>
+                <button id="finalize-ab" class="btn hidden">Finalizar Abdômen</button>
+                <button id="back-ab" class="btn">Voltar</button>
+            </div>
+        </div>
+        <footer>2025 | Desenvolvido por Gabriel</footer>
+    </div>
+    <script defer src="main.js"></script>
+    <script>
+        // Fallback para verificar se o main.js foi carregado
+        window.addEventListener('load', () => {
+            if (typeof ui === 'undefined') {
+                alert('Erro: O arquivo main.js não foi carregado corretamente. Verifique o console do navegador (F12).');
+            }
+        });
+    </script>
+</body>
+</html>
